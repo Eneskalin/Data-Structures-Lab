@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-/*Soru 2) Bir sayının üssünü çgkğyşjf(özyinelemeli) bir fonksiyon kullanarak hesaplayan bir program
+/*Soru 2) Bir sayının üssünü rekurisif(özyinelemeli) bir fonksiyon kullanarak hesaplayan bir program
 yazınız. Fonksiyon iki parametre almalıdır: taban ve üs. Üs 0 ise sonuç 1, üs 1 ise sonuç tabanın
 kendisi olacaktır. Üs negatif değer alamaz.
 Fonksiyonun prototipi şu şekilde olmalıdır: int usAl(im taban, İÜ us);
-R k" r if olarak üs alma işlemi gerçekleştirilmelidir.
+Rekurisif olarak üs alma işlemi gerçekleştirilmelidir.
 Kullanıcıdan taban ve üs değerleri alınacak, fonksiyon ile üs hesaplanacak ve sonuç
 ekrana yazdırılacaktır.
 
@@ -17,8 +17,8 @@ The and will be taken from the user, the will be
 the tung!lgn, and the be printed on the
 */
 
-int calculatePower(int base,int exponent,int counter){
-    int base2=base;
+int calculatePower(int base,int exponent,int base2){
+    
     if (exponent<0)
     {
         return -1;
@@ -33,10 +33,10 @@ int calculatePower(int base,int exponent,int counter){
         return base;
     }
     else{
-        if (counter != exponent)
+        if (exponent !=1)
         {
             
-            return calculatePower(base*base,exponent,counter+1);
+            return calculatePower(base*base2,exponent-1,base2);
         }
         return base;
         
@@ -46,10 +46,10 @@ int calculatePower(int base,int exponent,int counter){
 }
 
 void main(){
-    int counter=1;
+
     int base,exponent;
     scanf("%d",&base);
     scanf("%d",&exponent);
-    printf("%d",calculatePower(base,exponent,counter));
+    printf("%d",calculatePower(base,exponent,base));
 
 }
