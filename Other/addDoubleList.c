@@ -2,19 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*In a double linked list. the structure ofa node as defined as follows:
-struct node {
-Int employeeNo:
-char name[20]:
-struct node •next;
-structnode •ptev:
-node.
 
-the nodes in the last are sorted according to employeeNo rn ascending order (from smaller to larger ).
-employeeNo degerine gore kucukten buyuge isralanmisbir cift bagli lsiteyi verilen isimi employee degerine 
-gore listeye ekelyen fonksyionu yazin 
-
-*/
 
 typedef struct addDoubleList
 {
