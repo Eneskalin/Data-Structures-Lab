@@ -14,6 +14,7 @@ struct node {
  printf("%d", root-> data);
  preorder(root-> left);
  preorder(root-> right);
+ 
  }
  }
 
